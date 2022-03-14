@@ -16,9 +16,8 @@ html {
 }
 
 body {
-  /* background: linear-gradient(270deg, #FFD7D7 0%, #FFD7D7 0.01%, #FFFFFF 51.04%, #D9E8FF 100%); */
-  min-width: 280px;
-  min-height: 100vh;
+  /* min-width: 280px;
+  height: 100vh; */
   position: relative;
 
   background: url(/assets/img/Фон.png) no-repeat;
@@ -46,7 +45,7 @@ li {
   height: 450px;
   width: 100%;
   position: relative;
-  margin-top: 50px;
+  margin-top: 48px;
   
   z-index: 5;
 }
