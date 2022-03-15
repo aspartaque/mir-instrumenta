@@ -75,10 +75,9 @@ border: 2px solid #002047;
 box-sizing: border-box;
 border-radius: 4px;
 
-max-width: 210px;
-width: 100%;
-max-height: 100px;
-height: 100%;
+width: clamp(163px, 33.5vw, 210px);
+height: clamp(78px, 21.5vw, 100px);
+
 margin-bottom: 15px;
 cursor: pointer;
 
@@ -100,8 +99,9 @@ position: relative;
 .icon-bosch {
   background-position: center;
   /* transition:  all .3s ease; */
-  padding: 32px 30px;
+  padding: 18px 15px;
   width: 100%;
+  max-height: 100px;
   height: 100%;
   fill:#2B2A29;
 
@@ -136,9 +136,11 @@ position: relative;
 }
 
 .icon-makita {
+
   width: 100%;
+  max-height: 100px;
   height: 100%;
-  padding: 32px 30px;
+  padding: 18px 15px;
   fill:#CD2628;
 }
 .icon-makita:hover {
@@ -152,8 +154,9 @@ position: relative;
 .icon-stihl {
   fill:#EB6320;
   width: 100%;
+  max-height: 100px;
   height: 100%;
-  padding: 32px 30px;
+  padding: 24px 15px;
 }
 .icon-stihl:hover {
   fill: #fff;
@@ -165,8 +168,9 @@ position: relative;
 
 .icon-dremel {
   width: 100%;
+  max-height: 100px;
   height: 100%;
-  padding: 32px 30px;
+  padding: 18px 15px;
   fill:#0B4F96;
 }
 .icon-dremel:hover {
@@ -194,7 +198,7 @@ position: relative;
 .icon-patriot {
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
   fill:#EB5D1D;
 }
 .icon-patriot:hover {
@@ -207,7 +211,7 @@ position: relative;
 .icon-pecanta {
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
   fill:#FF0416
 }
 .icon-pecanta:hover {
@@ -220,7 +224,7 @@ position: relative;
 .icon-karher {
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
   /* fill:#FFFF01; */
 }
 .icon-karher:hover {
@@ -233,7 +237,7 @@ position: relative;
 .icon-metabo {
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
   fill:#115945;
 }
 .icon-metabo:hover {
@@ -247,7 +251,7 @@ position: relative;
   fill:#244081;
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
 }
 .icon-aurora:hover {
   fill: #FFF;
@@ -260,7 +264,7 @@ position: relative;
   fill:#F5791F;
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
 }
 .icon-skat:hover {
   fill: #FFF;
@@ -275,7 +279,7 @@ position: relative;
   fill: #DF1833;
   width: 100%;
   height: 100%;
-  padding: 22px 30px;
+  padding: 10px 20px;
 }
 .icon-interskol:hover {
   fill: #FFF;
@@ -300,9 +304,8 @@ border: 2px solid #FE0000;
 box-sizing: border-box;
 border-radius: 4px;
 
-width: 210px;
-height: 70px;
-margin-bottom: 5px;
+width: clamp(163px, 33.5vw, 210px);
+height: clamp(55px, 15.5vw, 70px);
 cursor: pointer;
 
 }
@@ -557,19 +560,20 @@ gap: 10px;
       color: #FFFFFF;
     }
     
-    .top-mob__left-btn:hover,
+    /* .top-mob__left-btn:hover,
     .top-mob__right-btn:hover {
       transform: scale(1.1);
-    }
+    } */
     
     .top-mob__left-btn {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      width: 100%;
-      max-width: 328px;
-    height: 88px;
+      /* width: 100%;
+      max-width: 328px; */
+      width: clamp(162px, 100vw, 328px);
+      height: 88px;
     background: #002047;
     border-radius: 8px;
     
@@ -597,6 +601,7 @@ gap: 10px;
     line-height: 28px;
     color: #FFFFFF;
     transition: transform .2s;
+   
     }
 
     .tools-left__btn,
@@ -617,15 +622,21 @@ gap: 10px;
 
     .section-company {
       height: 100%;
-      align-items: center;
+      align-items: center;  
+      height: clamp(445px, 100vh, 650px);
     }
 
     .company-right {
       height: 100%;
       align-items: center;
+      justify-content: space-between;
     }
     .company-left {
       align-items: center;
+      justify-content: space-between;
+    }
+    .company-left__border {
+      margin: unset;
     }
 
     .tools-items {
@@ -641,10 +652,11 @@ gap: 10px;
       max-width: 252px;
       width: 100%;
       height: 172px;
+      /* justify-content: space-between;  TYT U SPARTAKA NADO SPROSIT!!!! */
     }
 
     .tools-item img {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .tools-item__description {
@@ -662,5 +674,66 @@ gap: 10px;
       font-size: 14px;
       line-height: 18px;
       /* white-space: nowrap; */
+    }
+  }
+
+  @media (max-width:768px) {
+    .adaptive-bg img {
+      width: clamp(300px, 100%, 641px);
+    }
+
+    .top-mob__left-btn {
+      font-size: clamp(10px, 2.5vw, 18px);
+      width: clamp(100vw, 10vw, 328px);
+      height: clamp(52px, 15vw, 82px);
+      max-width: unset;
+      white-space: nowrap;
+      margin-right: 15px;
+      padding: 0 15px;
+    }
+    .top-mob__right-btn {
+      font-size: clamp(10px, 2.5vw, 18px);
+      width: clamp(100vw, 10vw, 328px);
+      height: clamp(52px, 15vw, 82px);
+      white-space: nowrap;
+      padding: 0 5px;
+      line-height: clamp(15px, 15vw, 100%);
+    }
+
+
+    .tools-item {
+      justify-content: space-between;
+    }
+  }
+
+  @media(max-width: 726px) {
+    .section-company {
+      align-items: flex-start;
+    }
+    .footer-items {
+      display: block;
+      height: 100%;
+      
+    }
+    .footer-item {
+      margin: 10px 0;
+      white-space: nowrap;
+      padding: unset;
+    }
+  }
+
+  @media (max-width: 510px) {
+    .top-mob__btn-block {
+      padding: unset;
+    }
+
+    .section-company {
+      height: clamp(450px, 54vh, 650px);
+    }
+  }
+
+  @media (max-width: 375px) {
+    .company-left {
+      align-items: unset;
     }
   }
