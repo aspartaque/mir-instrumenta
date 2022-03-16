@@ -522,57 +522,32 @@ gap: 10px;
     .top-mob__btn-block {
       display: flex;
       justify-content: space-between;
-      padding:  0 20px;
+      padding:  0 30px;
+      gap: 5px;
     }
     
     
-    .top-mob__left-btn a,
-    .top-mob__right-btn a {
+    .top-mob__btn {
+      width: clamp(163px, 40vw, 328px);
+      height: clamp(51px ,18vw, 82px);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .top-mob__btn a {
       color: #FFFFFF;
+      font-size: clamp(10px, 2.5vw, 18px);
     }
-    
-    /* .top-mob__left-btn:hover,
-    .top-mob__right-btn:hover {
-      transform: scale(1.1);
-    } */
-    
-    .top-mob__left-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      /* width: 100%;
-      max-width: 328px; */
-      width: clamp(162px, 100vw, 328px);
-      height: 88px;
-    background: #002047;
-    border-radius: 8px;
-    
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    transition: transform .2s;
-    color: #FFFFFF;
+
+    .red-btn {
+      background: #FE0000;
+
     }
-    
-    .top-mob__right-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    
-      max-width: 328px;
-      width: 100%;
-    height: 88px;
-    background: #FE0000;
-    border-radius: 8px;
-    
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    color: #FFFFFF;
-    transition: transform .2s;
-   
+    .blue-btn {
+      background: #002047;
+
     }
 
     .tools-left__btn,
@@ -644,7 +619,6 @@ gap: 10px;
 
       font-size: 14px;
       line-height: 18px;
-      /* white-space: nowrap; */
     }
     .company-left,
     .company-right {
@@ -707,7 +681,7 @@ gap: 10px;
 
   @media (max-width: 510px) {
     .top-mob__btn-block {
-      padding: unset;
+      padding:  0 10px;
     }
 
     .section-company {
@@ -729,9 +703,6 @@ gap: 10px;
   }
 
   @media (max-width: 375px) {
-    /* .company-left {
-      align-items: unset;
-    } */
 
     .company-left__border {
       width: clamp(135px, 33.5vw, 210px);;
@@ -740,17 +711,21 @@ gap: 10px;
       width: clamp(135px, 33.5vw, 210px);;
     }
 
-    .top-mob__left-btn {
-      margin-right: 5px;
-    }
-
-    .top-mob__right-btn {
-      padding: 0 2px;
+    .top-mob__btn-block {
+      padding: unset;
     }
   }
 
   @media (max-width: 340px) {
     .tel {
       display: none;
+    }
+
+    .company-left {
+      width: auto;
+    }
+
+    .company-right {
+      width: auto;
     }
   }
