@@ -422,54 +422,25 @@ transition: transform .2s;
   border-radius: 4px;
   padding: 10px 15px;
 
-  /* max-height: 40px;
-  height: 100%;
-  max-width: 150px;
-  width: 100%; */
-  
   color: #FFF;
   transition: all .3s ease-in-out;
   font-weight: 600;
 font-size: 14px;
 line-height: 16px;
 text-align: center;
-
 }
 .tools-item__description {
   display: none;
-
   z-index: 100;
 }
 
-/* 
-.benzopila {
-  width: 125px;
-  height: 40px;
+.tools-item:hover .red {
+  background: #FE0000;
 }
-.pulesos {
-  width: 105px;
-  height: 40px;
+
+.tools-item .red {
+  background: #FE0000;
 }
-.pila {
-  width: 155px;
-  height: 40px;
-}
-.ushm {
-  width: 104px;
-  height: 40px;
-}
-.rubanok,
-.drell,
-.motokosa {
-  width: 125px;
-  height: 40px;
-  padding: 20px;
-}
-.moika {
-  width: 239px;
-  height: 40px;
-  padding: 20px;
-} */
 
 
 .tools-item {
