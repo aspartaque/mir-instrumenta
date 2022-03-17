@@ -14,14 +14,21 @@
 html {
   scroll-behavior: smooth;
   background: linear-gradient(270deg, #FFD7D7 0%, #FFD7D7 0.01%, #FFFFFF 51.04%, #D9E8FF 100%);
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   background: url("../img/Фон.png") no-repeat;
   background-position: center 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
+
 
 ul,
 ol,
@@ -33,7 +40,24 @@ li {
   max-width: 1440px;
   width: 100%;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0 auto; 
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main>.wrapper {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* MAIN FIRMS START */
@@ -54,10 +78,7 @@ li {
   align-items: flex-start;
   height: 450px;
   width: 100%;
-  position: relative;
-  top: 50px;
-  margin-top: 48px;
-  
+  padding-top: 45px ;
   z-index: 5;
 }
 
@@ -632,7 +653,6 @@ gap: 15px;
       max-width: 252px;
       width: 100%;
       height: 172px;
-      /* justify-content: space-between;  TYT U SPARTAKA NADO SPROSIT!!!! */
     }
 
     .tools-item img {
@@ -657,6 +677,12 @@ gap: 15px;
     .company-left,
     .company-right {
       flex-wrap: nowrap;
+    }
+  }
+
+  @media (max-height: 920px) {
+    .footer {
+      position: unset;
     }
   }
 
