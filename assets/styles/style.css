@@ -14,13 +14,25 @@
 html {
   scroll-behavior: smooth;
   background: linear-gradient(270deg, #FFD7D7 0%, #FFD7D7 0.01%, #FFFFFF 51.04%, #D9E8FF 100%);
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  position: relative;
   background: url("../img/Фон.png") no-repeat;
   background-position: center 0;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 ul,
 ol,
@@ -31,9 +43,14 @@ li {
 .wrapper {
   max-width: 1440px;
   width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto; 
 }
+
+.footer,
+.main {
+  width: 100%;
+} 
 
 /* MAIN FIRMS START */
 
@@ -53,9 +70,7 @@ li {
   align-items: flex-start;
   height: 450px;
   width: 100%;
-  position: relative;
-  margin-top: 48px;
-  
+  padding-top: 45px ;
   z-index: 5;
 }
 
@@ -66,7 +81,7 @@ li {
   max-width: 450px;
   width: 100%;
   height: 100%;
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .company-left__border {
@@ -128,11 +143,13 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .makita:hover {
   background: #CD2628;
   background-position: center;
   fill:#FFFFFF;
+  border-color: transparent;
 }
 
 .icon-makita {
@@ -150,6 +167,7 @@ position: relative;
 
 .stihl:hover {
   background: #EB6320;
+  border-color: transparent;
 }
 .icon-stihl {
   fill:#EB6320;
@@ -164,6 +182,7 @@ position: relative;
 
 .dremel:hover {
   background: #0B4F96;
+  border-color: transparent;
 }
 
 .icon-dremel {
@@ -193,6 +212,7 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-color: transparent;
 }
 
 .icon-patriot {
@@ -206,6 +226,7 @@ position: relative;
 }
 .patriot:hover {
   background: #EB5D1D;
+  border-color: transparent;
 }
 
 .icon-pecanta {
@@ -219,6 +240,7 @@ position: relative;
 }
 .pecanta:hover {
   background: #FF0416;
+  border-color: transparent;
 }
 
 .icon-karher {
@@ -232,6 +254,7 @@ position: relative;
 }
 .karher:hover {
   background: #000000;
+  border-color: transparent;
 }
 
 .icon-metabo {
@@ -245,6 +268,7 @@ position: relative;
 }
 .metabo:hover {
   background: #115945;
+  border-color: transparent;
 }
 
 .icon-aurora {
@@ -258,6 +282,7 @@ position: relative;
 }
 .aurora:hover {
   background: #244081;
+  border-color: transparent;
 }
 
 .icon-skat {
@@ -272,7 +297,7 @@ position: relative;
 
 .skat:hover {
   background: #F5791F;
-  
+  border-color: transparent;
 }
 
 .icon-interskol {
@@ -286,6 +311,7 @@ position: relative;
 }
 .interskol:hover {
   background: #DF1833;
+  border-color: transparent;
 }
 
 .company-link__right {
@@ -318,7 +344,7 @@ cursor: pointer;
   width: 100%;
   height: 390px;
 
-  grid-gap: 3px;
+  grid-gap: 10px;
 }
 
 
@@ -327,6 +353,7 @@ cursor: pointer;
 .section-tools {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .tools-items {
@@ -335,6 +362,8 @@ cursor: pointer;
   max-width: 684px;
   width: 100%;
   gap: 20px;
+  height: 100%;
+  /* max-height: 253px; */
 }
 
 .tools-item {
@@ -367,7 +396,7 @@ cursor: pointer;
   align-items: center;
   width: 100%;
   max-width: 480px;
-height: 66px;
+height: 79px;
 background: #002047;
 border-radius: 8px;
 
@@ -377,7 +406,7 @@ line-height: 24px;
 transition: transform .2s;
 color: #FFFFFF;
 
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .tools-right__btn {
@@ -387,7 +416,7 @@ color: #FFFFFF;
 
   max-width: 480px;
   width: 100%;
-height: 66px;
+height: 79px;
 background: #FE0000;
 border-radius: 8px;
 
@@ -396,7 +425,10 @@ font-size: 18px;
 line-height: 28px;
 color: #FFFFFF;
 transition: transform .2s;
-  margin-top: 60px;
+
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
 }
 .tools-right__btn a,
 .tools-left__btn a {
@@ -405,30 +437,26 @@ transition: transform .2s;
 
 .tools-right__btn:hover,
 .tools-left__btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* TOOLS DESCRIPTION*/
 .tools-item:hover {
-  transform: scale(1.08);
   z-index: 200;
-  transition: all .3s ease-in-out;
 }
-.tools-item:hover .tools-item__description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #002047;
-  border-radius: 4px;
-  padding: 10px 15px;
+ 
 
-  color: #FFF;
-  transition: all .3s ease-in-out;
-  font-weight: 600;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-}
+
+
+
+
+
+
+
+
+
+
+
 .tools-item__description {
   display: none;
   z-index: 100;
@@ -446,6 +474,19 @@ text-align: center;
 .tools-item {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.moika {
+width: 239px;
+}
+
+.derevo {
+  width: 285px;
+}
+
+.svarka {
+  width: 189px;
 }
 
 /* ___FOOTER___ */
@@ -455,11 +496,22 @@ text-align: center;
 margin-top: 20px;
 }
 
-.footer-items {
-  height: 80px;
+.section__footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+}
+
+.footer-items {
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 25px 186px; */
+  white-space: nowrap;
+  padding: 25px 20px;
+  gap: 10px;
 }
 
 .footer-item {
@@ -467,9 +519,8 @@ margin-top: 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
-gap: 10px;
-  padding: 0 40px 0 0;
- 
+gap: 15px;
+margin-top: 7px;
 }
 .footer-item a {
   color:#5C82B0;
@@ -509,14 +560,42 @@ gap: 10px;
     }
   }
 
+  /* @media screen and (max-width: 1076px) {
+    .footer-items {
+      max-width: 80%;
+    }
+  } */
+
+  @media screen and (min-width: 940px) {
+    .tools-item:hover .tools-item__description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #002047;
+      border-radius: 4px;
+      padding: 10px 15px;
+    
+      position: absolute;
+      bottom: -28px;
+      height: 40px;
+      padding: 0 20px;
+    
+      color: #FFF;
+      font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    }
+  }
+
   @media (max-width:940px) {
+
+    .tools-items {
+      max-width: unset;
+    }
 
     .footer-items {
       justify-content: flex-start;
-    }
-
-    .section__footer-content {
-     padding: 30px 0;
     }
 
     .top-mob__btn-block {
@@ -598,7 +677,6 @@ gap: 10px;
       max-width: 252px;
       width: 100%;
       height: 172px;
-      /* justify-content: space-between;  TYT U SPARTAKA NADO SPROSIT!!!! */
     }
 
     .tools-item img {
@@ -625,8 +703,22 @@ gap: 10px;
       flex-wrap: nowrap;
     }
   }
+/* 
+  @media (max-height: 920px) {
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .footer {
+      position: relative;
+    }
+  } */
+
 
   @media (max-width:768px) {
+
     .adaptive-bg img {
       width: clamp(300px, 100%, 641px);
     }
@@ -663,11 +755,7 @@ gap: 10px;
     .section-company {
       align-items: flex-start;
     }
-    .footer-items {
-      display: block;
-      height: 100%;
-      
-    }
+   
     .footer-item {
       margin: 10px 0;
       white-space: nowrap;
@@ -677,6 +765,13 @@ gap: 10px;
     .company-right {
       flex-wrap: nowrap;
     }
+
+    .footer-items {
+      display: block;
+      height: 100%;
+      
+    }
+
   }
 
   @media (max-width: 510px) {
@@ -685,7 +780,7 @@ gap: 10px;
     }
 
     .section-company {
-      height: clamp(440px, 100vh, 650px);
+      height: clamp(450px, 77vh, 550px);
     }
 
     .company-left,
@@ -717,9 +812,9 @@ gap: 10px;
   }
 
   @media (max-width: 340px) {
-    .tel {
+    /* .tel {
       display: none;
-    }
+    } */
 
     .company-left {
       width: auto;
@@ -727,5 +822,16 @@ gap: 10px;
 
     .company-right {
       width: auto;
+    }
+
+    .footer-items {
+      padding: 25px 0;
+    }
+  }
+
+  @media (max-width:1024px) and (max-height:768px) and (min-width:1024px) and (min-height: 768px) {
+
+    .section-company {
+      padding-top: 10px;
     }
   }
