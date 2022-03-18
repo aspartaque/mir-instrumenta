@@ -14,9 +14,9 @@
 html {
   scroll-behavior: smooth;
   background: linear-gradient(270deg, #FFD7D7 0%, #FFD7D7 0.01%, #FFFFFF 51.04%, #D9E8FF 100%);
-  height: 100%;
+  min-height: 100%;
   width: 100%;
-
+  display: flex;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -25,8 +25,12 @@ html::-webkit-scrollbar {
 body {
   background: url("../img/Фон.png") no-repeat;
   background-position: center 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -42,23 +46,11 @@ li {
   padding: 0 15px;
   margin: 0 auto; 
 }
-.container {
-  min-height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 
-.main>.wrapper {
-  flex: 1 1 auto;
+.footer,
+.main {
   width: 100%;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+} 
 
 /* MAIN FIRMS START */
 
@@ -371,7 +363,7 @@ cursor: pointer;
   width: 100%;
   gap: 20px;
   height: 100%;
-  max-height: 253px;
+  /* max-height: 253px; */
 }
 
 .tools-item {
@@ -445,32 +437,26 @@ transition: transform .2s;
 
 .tools-right__btn:hover,
 .tools-left__btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* TOOLS DESCRIPTION*/
 .tools-item:hover {
   z-index: 200;
 }
-.tools-item:hover .tools-item__description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #002047;
-  border-radius: 4px;
-  padding: 10px 15px;
+ 
 
-  position: absolute;
-  bottom: -28px;
-  height: 40px;
-  padding: 0 20px;
 
-  color: #FFF;
-  font-weight: 600;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-}
+
+
+
+
+
+
+
+
+
+
 .tools-item__description {
   display: none;
   z-index: 100;
@@ -510,13 +496,22 @@ width: 239px;
 margin-top: 20px;
 }
 
+.section__footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .footer-items {
-  height: 80px;
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 186px;
+  /* padding: 25px 186px; */
   white-space: nowrap;
+  padding: 25px 20px;
+  gap: 10px;
 }
 
 .footer-item {
@@ -525,6 +520,7 @@ margin-top: 20px;
   display: flex;
   align-items: center;
 gap: 15px;
+margin-top: 7px;
 }
 .footer-item a {
   color:#5C82B0;
@@ -564,14 +560,42 @@ gap: 15px;
     }
   }
 
+  /* @media screen and (max-width: 1076px) {
+    .footer-items {
+      max-width: 80%;
+    }
+  } */
+
+  @media screen and (min-width: 940px) {
+    .tools-item:hover .tools-item__description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #002047;
+      border-radius: 4px;
+      padding: 10px 15px;
+    
+      position: absolute;
+      bottom: -28px;
+      height: 40px;
+      padding: 0 20px;
+    
+      color: #FFF;
+      font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    }
+  }
+
   @media (max-width:940px) {
+
+    .tools-items {
+      max-width: unset;
+    }
 
     .footer-items {
       justify-content: flex-start;
-    }
-
-    .section__footer-content {
-     padding: 30px 0;
     }
 
     .top-mob__btn-block {
@@ -679,14 +703,22 @@ gap: 15px;
       flex-wrap: nowrap;
     }
   }
-
+/* 
   @media (max-height: 920px) {
     .footer {
       position: unset;
     }
   }
+  
+  @media (max-width: 1440px) {
+    .footer {
+      position: relative;
+    }
+  } */
+
 
   @media (max-width:768px) {
+
     .adaptive-bg img {
       width: clamp(300px, 100%, 641px);
     }
@@ -723,11 +755,7 @@ gap: 15px;
     .section-company {
       align-items: flex-start;
     }
-    .footer-items {
-      display: block;
-      height: 100%;
-      
-    }
+   
     .footer-item {
       margin: 10px 0;
       white-space: nowrap;
@@ -737,6 +765,13 @@ gap: 15px;
     .company-right {
       flex-wrap: nowrap;
     }
+
+    .footer-items {
+      display: block;
+      height: 100%;
+      
+    }
+
   }
 
   @media (max-width: 510px) {
@@ -745,7 +780,7 @@ gap: 15px;
     }
 
     .section-company {
-      height: clamp(440px, 100vh, 650px);
+      height: clamp(450px, 77vh, 550px);
     }
 
     .company-left,
@@ -777,9 +812,9 @@ gap: 15px;
   }
 
   @media (max-width: 340px) {
-    .tel {
+    /* .tel {
       display: none;
-    }
+    } */
 
     .company-left {
       width: auto;
@@ -787,5 +822,16 @@ gap: 15px;
 
     .company-right {
       width: auto;
+    }
+
+    .footer-items {
+      padding: 25px 0;
+    }
+  }
+
+  @media (max-width:1024px) and (max-height:768px) and (min-width:1024px) and (min-height: 768px) {
+
+    .section-company {
+      padding-top: 10px;
     }
   }
