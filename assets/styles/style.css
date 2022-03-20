@@ -515,6 +515,8 @@ li {
 }
 
 
+
+
 /* MEDIA QUARIES */
 @media (max-width: 1680px) and (min-width: 1366px) and (max-height:1050px) and (min-height:1050px) {
   body {
@@ -589,6 +591,21 @@ li {
     text-align: center;
   }
 
+  .tools-item:hover .pila:hover,
+  .tools-item:hover .benzopila:hover,
+  .tools-item:hover .pulesos:hover,
+  .tools-item:hover .ushm:hover,
+  .tools-item:hover .rubanok:hover,
+  .tools-item:hover .drell:hover,
+  .tools-item:hover .motokosa:hover,
+  .tools-item:hover .moika:hover {
+    background: #143E72;
+  } 
+  
+  .moikared {
+    white-space: nowrap;
+  }
+
   .tools-item:hover .red {
     background: #fe0000;
   }
@@ -596,6 +613,18 @@ li {
   .tools-item .red {
     background: #fe0000;
   }
+
+  .tools-item:hover .generator:hover,
+  .tools-item:hover .svarka:hover,
+  .tools-item:hover .motopomp:hover,
+  .tools-item:hover .ushmred:hover,
+  .tools-item:hover .derevo:hover,
+  .tools-item:hover .moikared:hover,
+  .tools-item:hover .drellred:hover,
+  .tools-item:hover .perf:hover {
+    background: #FF4A4A;
+  }
+
 }
 
 @media (max-width: 940px) {
