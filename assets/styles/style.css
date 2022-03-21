@@ -100,7 +100,7 @@ li {
   width: clamp(163px, 33.5vw, 210px);
   height: clamp(78px, 21.5vw, 100px);
 
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   cursor: pointer;
 
   position: relative;
@@ -348,7 +348,6 @@ li {
 .section-tools {
   display: flex;
   justify-content: space-between;
-  /* margin-top: 20px; */
 }
 
 .tools-items {
@@ -358,7 +357,7 @@ li {
   width: 100%;
   gap: 20px;
   height: 100%;
-  /* max-height: 253px; */
+
 }
 
 .tools-item {
@@ -368,9 +367,6 @@ li {
   width: 156px;
   height: 110px;
   position: relative;
-
-  transition: transform 0.2s;
-  /* transition: all .3s ease-in-out; */
 }
 
 .tools-left {
@@ -521,9 +517,9 @@ li {
     zoom: 87.5%;
   }
 
-  html {
+  /* html {
     zoom: 86%;
-  }
+  } */
 }
 
 @media (max-width: 1410px) {
@@ -548,9 +544,9 @@ li {
   }
 }
 
-@media (max-width: 1366px) and (min-width: 768px) {
+@media (max-width: 1366px) and (min-height: 768px) {
   body {
-    zoom: 80.5%;
+    zoom: 80.9%;
 
   }
 }
@@ -559,16 +555,15 @@ li {
 @media (max-width: 1280px) and (min-width: 1024px) and (max-height:1024px) and (min-height: 1024px) {
   body {
     zoom: 77.5%;
-    /* overflow: hidden; */
   }
 
-  html {
+  /* html {
     zoom: 88%;
-  }
+  } */
 }
 
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 941px) {
   .tools-item:hover .tools-item__description {
     display: flex;
     align-items: center;
@@ -583,11 +578,13 @@ li {
     padding: 0 20px;
 
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
     text-align: center;
+
+    line-height: 18px;
   }
+
 
   .tools-item:hover .red {
     background: #fe0000;
@@ -599,6 +596,11 @@ li {
 }
 
 @media (max-width: 940px) {
+
+  .tools-item:hover .tools-item__description {
+
+  }
+
   .tools-items {
     max-width: unset;
   }
@@ -609,13 +611,13 @@ li {
 
   .top-mob__btn-block {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 30px;
-    gap: 5px;
+    gap: 20px;
   }
 
   .top-mob__btn {
-    width: clamp(163px, 40vw, 328px);
+    width: clamp(163px, 44vw, 328px);
     height: clamp(51px, 18vw, 82px);
     border-radius: 8px;
     display: flex;
@@ -628,6 +630,7 @@ li {
     font-size: clamp(11px, 2.5vw, 18px);
     letter-spacing: -0.4px;
     padding: 0 2px;
+    font-weight: 700;
   }
 
   .red-btn {
@@ -649,29 +652,40 @@ li {
   .adaptive-bg {
     display: flex;
     justify-content: center;
-
+ 
     margin: 49px 0;
   }
 
+  .adaptive-bg img {
+    width: 75%;
+  }
+
   .section-company {
+    justify-content: space-around;
     height: 100%;
-    align-items: center;
-    height: clamp(445px, 100vh, 650px);
+    align-items: flex-start;
+
+    /* height: clamp(445px, 100vh, 692px); */
   }
 
   .company-right {
+    width: unset;
     height: 100%;
     align-items: center;
     justify-content: space-between;
   }
   .company-left {
+    width: unset;
     align-items: center;
     justify-content: space-between;
   }
   .company-left__border {
-    margin: unset;
+    height: clamp(78px, 21.5vw, 120px);
   }
 
+  .company-right__border {
+    height: clamp(55px, 15.5vw, 84px);
+  }
   .tools-items {
     flex-direction: column;
   }
@@ -701,9 +715,11 @@ li {
     background: #002047;
     border-radius: 4px;
     padding: 14px;
-    color: #ffffff;
-
+    color: #fff;
+    font-weight: 700;
     font-size: 14px;
+    text-align: center;
+
     line-height: 18px;
   }
   .company-left,
@@ -713,8 +729,36 @@ li {
 }
 
 @media (max-width: 768px) {
+
+  .top-mob__btn-block {
+    gap: 66px;
+  }
+
   .adaptive-bg img {
-    width: clamp(300px, 100%, 641px);
+    width: clamp(300px, 100%, 670px);
+  }
+
+  .adaptive-bg {
+    margin-bottom: 27px;
+  }
+
+  .top-mob__btn-block {
+    justify-content: center;
+  }
+
+  .company-left__border,
+  .company-right__border {
+    width: 100%;
+    max-width: 252px;
+  }
+
+  .section-tools {
+    margin-top: 72px;
+    justify-content: space-evenly;
+  }
+
+  .section-company {
+    justify-content:space-evenly;
   }
 
   .top-mob__left-btn {
@@ -742,6 +786,10 @@ li {
   .company-right {
     flex-wrap: nowrap;
   }
+
+  .footer-items {
+    gap: 28px;
+  }
 }
 
 @media (max-width: 726px) {
@@ -760,9 +808,9 @@ li {
     flex-wrap: nowrap;
   }
 
-  .section-company {
+  /* .section-company {
     height: clamp(444px, 100.5vh, 590px);
-  }
+  } */
 }
 
 @media (max-width: 510px) {
